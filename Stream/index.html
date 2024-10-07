@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Stream Example</title>
+</head>
+<body>
+    <input type="text" id="inputStream" placeholder="Ketik sesuatu...">
+    <p id="outputStream"></p>
+
+    <script>
+        const inputField = document.getElementById('inputStream');
+        const outputField = document.getElementById('outputStream');
+
+        // Setiap kali pengguna mengetik sesuatu, data langsung di-stream ke elemen output
+        inputField.addEventListener('input', function() {
+            outputField.textContent = `Kamu mengetik: ${inputField.value}`;
+        });
+    </script>
+</body>
+</html>
